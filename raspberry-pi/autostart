@@ -1,0 +1,18 @@
+[Unit]
+Description=Vibration-tolerant pipe-frame and Kalman steel-ball vision
+After=NetworkManager.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=arick
+WorkingDirectory=/home/arick/steel_ball/gray_crop
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/arick/steel_ball/gray_crop/detect_ball_stabilized.py --device /dev/v4l/by-id/usb-Web_Camera_Web_Camera_202604081837-video-index0 --width 640 --height 480 --camera-fps 30 --bind-host 0.0.0.0 --port 8080 --jpeg-quality 78 --settings /home/arick/steel_ball/gray_crop/stabilized_vision_settings.json
+Restart=always
+RestartSec=2
+KillSignal=SIGINT
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

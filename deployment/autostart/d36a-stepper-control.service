@@ -1,0 +1,19 @@
+[Unit]
+Description=D36A direct stepper cascaded ball control web interface
+After=NetworkManager.service hball-gray.service
+Wants=hball-gray.service
+Conflicts=hball-control.service
+
+[Service]
+Type=simple
+User=arick
+WorkingDirectory=/home/arick/d36a_test
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 /home/arick/d36a_test/d36a_cascade_direct_web.py --host 0.0.0.0 --port 8081 --minimum 0 --balance 235 --maximum 681 --vision-status-url http://127.0.0.1:8080/status.json
+Restart=always
+RestartSec=2
+KillSignal=SIGINT
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

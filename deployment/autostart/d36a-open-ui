@@ -1,0 +1,13 @@
+#!/bin/sh
+
+while ! /usr/bin/curl --fail --silent --max-time 1 \
+  http://127.0.0.1:8081/status.json >/dev/null 2>&1
+do
+  /usr/bin/sleep 1
+done
+
+exec /usr/bin/chromium \
+  --app=http://127.0.0.1:8081/ \
+  --start-maximized \
+  --no-first-run \
+  --disable-session-crashed-bubble

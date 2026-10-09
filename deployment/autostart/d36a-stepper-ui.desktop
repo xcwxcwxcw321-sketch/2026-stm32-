@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=D36A Stepper Ball Control
+Comment=Open the D36A stepper ball-control interface after desktop login
+Exec=/home/arick/.local/bin/d36a-open-ui
+Terminal=false
+X-GNOME-Autostart-enabled=true

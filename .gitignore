@@ -1,0 +1,39 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Keil/build artifacts
+Objects/
+Listings/
+*.o
+*.d
+*.crf
+*.map
+*.lst
+*.axf
+*.hex
+*.bin
+*.uvguix
+*.uvguix.*
+*.uvoptx
+*.log
+*.lock
+DebugConfig/
+
+# Local/editor and deployment secrets
+.env
+*.local
+*.bak
+*.tmp
+credentials*
+secrets*
+
+# Large captured images/videos and archives
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.mp4
+*.tar.gz
