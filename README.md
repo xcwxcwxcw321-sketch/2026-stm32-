@@ -149,9 +149,4 @@ sudo systemctl enable --now d36a-stepper-control.service
 - 编码器可以用于观测电机，但当前 Pi 侧的轴位置保护主要依靠最低点参考和软件步数限位，不能把编码器当作已经安装好的硬限位。
 - 任何改动后先用网页急停、再断电检查机械干涉；软件限位不是替代机械限位。
 
-## 7. 参考文件
-
-你提供的 GitHub 仓库页面截图已保存在 docs/reference-github-repository.png。截图对应的仓库为 xcwxcwxcw321-sketch/2026-stm32-，用于记录本项目的 GitHub 仓库位置和上传参考。
-
-![GitHub repository reference](docs/reference-github-repository.png)
 
