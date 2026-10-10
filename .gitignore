@@ -37,3 +37,7 @@ secrets*
 *.bmp
 *.mp4
 *.tar.gz
+
+# Documentation images intentionally kept in the repository
+!docs/
+!docs/reference-github-repository.png
